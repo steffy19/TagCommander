@@ -1,0 +1,48 @@
+//travelaudience code uses in homepage and booking flow
+
+Bootstrapper.data.resolve(['49311', '34261', '34086', '34121', '49314', '34106', '34134', '34246', '34242', '34088', '34056', '34044', '34170', '34137', '34098', '34054', '34082', '34068', '34085', '34142', '34217', '34203', '34093', '34107', '34235', '34222', '34187', '34074', '34144', '34176', '34128', '49315', '34182', '34228', '34155', '49310', '34166', '49312', '49314', '49313', '34191'],
+  function(stepNumber, pageType, depCityCode, depCityName, depCountry, arrCityCode, arrCityName, arrCountry, depDayName, depDay, depMonth, depYear, arrDayName, arrDay, arrMonth, arrYear, nPax, nAdults, nChildren, nInfants, flightClass, cardType, paxBirthday, paxNation, paxGender, baggage, currency, device, siteLanguage, checkInDate, checkOutDate, hotelBrand, hotelStars, hotelCity, airline, flightType, brandMarket, nRooms, depcountryname, hotelPrice, orderRevenue) {
+    Bootstrapper.loadScriptCallback('//static.prdct.nl/prdct.min.js', function() {
+      PRDCT.send(brandMarket, '001', stepNumber, {
+        'category': pageType,
+        'dep': depCityCode,
+        'depcity': depCityName,
+        'decountry': depCountry,
+        'arr': arrCityCode,
+        'arrcity': arrCityName,
+        'arrcountry': arrCountry,
+        'depdayname': depDayName,
+        'depday': depDay,
+        'depmonth': depMonth,
+        'depyear': depYear,
+        'arrdayname': arrDayName,
+        'arrday': arrDay,
+        'arrmonth': arrMonth,
+        'arryear': arrYear,
+        'npax': nPax,
+        'nadults': nAdults,
+        'nchildren': nChildren,
+        'ninfants': nInfants,
+        'cabclass': flightClass,
+        'cardtype': cardType,
+        'airline': airline,
+        'flighttype': flightType,
+        'pax_birthday': paxBirthday,
+        'pax_nation': paxNation,
+        'pax_gender': paxGender,
+        'luggage': baggage,
+        'currency': currency,
+        'device': device,
+        'sitelang': siteLanguage,
+        'check_in_date': checkInDate,
+        'check_out_date': checkOutDate,
+        'numberrooms': nRooms,
+        'hotelbrand': hotelBrand,
+        'hotelstarts': hotelStars,
+        'hotelcity': hotelCity,
+        'hotelcountry': depcountryname,
+        'hotelprice': hotelPrice,
+        'totalprice': orderRevenue
+      });
+    });
+  });
