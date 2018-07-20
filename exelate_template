@@ -1,0 +1,34 @@
+var custom_server = '';
+var custom_publisher_account = '';
+var custom_segment = '';
+var custom_sub_site = '';
+var param_category = '';
+var param_sub_category = '';
+var param_age  = '';
+var param_gender = '';
+var param_keyword = '';
+ 
+var customParams = [];
+var temp = {};
+ 
+	
+ 
+var local_server = custom_server ? custom_server : 'load';
+ 
+var local_string = '';
+local_string += '?p=' + custom_publisher_account;
+local_string += custom_segment ? ('&c=' + custom_segment) : '&c=';
+local_string += '&g=' + custom_sub_site;
+local_string += param_category ? ('&ctg=' + param_category) : '';
+local_string += param_sub_category ? ('&subctg=' + param_sub_category) : '';
+local_string += param_age ? ('&ag=' + param_age) : '';
+local_string += param_gender ? ('&gd=' + param_gender) : '';
+local_string += param_keyword ? ('&kw=' + param_keyword) : '';
+ 
+for (var i = 0; i < customParams.length; i++) {
+	temp = customParams[i];
+	local_string += '&' + temp.key + '=' + temp.val;
+}
+ 
+var local_scr_url = '//' + local_server + '.exelator.com/load/' + local_string;
+Bootstrapper.insertScript(local_scr_url);
