@@ -1,0 +1,105 @@
+/* Ad Placement Handling */
+function createIntentDiv(adType, el) {
+	if (adType && el && (document.querySelectrAll(el).length > 0)) {
+		var newDiv = document.createElement('div'),
+			target =  document.querySelectrAll(el)[0];
+ 
+		newDiv.id = adType;
+		target.appendChild(newDiv);
+	}
+}
+ 
+createIntentDiv('IntentMediaIntercard', '');
+createIntentDiv('IntentMediaIntercard', '');
+createIntentDiv('IntentMediaIntercard', '');
+ 
+/* Tag Configuration Handling */
+window.IntentMediaProperties = {
+	'page_id': ''
+};
+ 
+function addIntentMediaProperty(key, val) {
+	if (val) {
+		IntentMediaProperties[key] = val;
+	}
+}
+ 
+var delimiter = ';';
+addIntentMediaProperty('tag_path', '//a.cdn.intentmedia.net/javascripts/v1/intent_media_core.js');
+addIntentMediaProperty('site_name', '');
+addIntentMediaProperty('site_language', '');
+addIntentMediaProperty('site_country', '');
+addIntentMediaProperty('site_currency', '');
+addIntentMediaProperty('display_format_type', '');
+addIntentMediaProperty('user_guest', '');
+addIntentMediaProperty('user_member_id', '');
+addIntentMediaProperty('visitor_id', '');
+addIntentMediaProperty('user_default_airport', '');
+addIntentMediaProperty('user_airline_loyalty', ''.split(delimiter).join(','));
+addIntentMediaProperty('pricing', ''.split(delimiter).join(','));
+addIntentMediaProperty('sort_order', '');
+addIntentMediaProperty('number_of_opaque_listings', '');
+addIntentMediaProperty('selection_price', ''.split(delimiter).join(','));
+addIntentMediaProperty('product_category', '');
+addIntentMediaProperty('travelers', '');
+addIntentMediaProperty('adults', '');
+addIntentMediaProperty('children', '');
+addIntentMediaProperty('seniors', '');
+addIntentMediaProperty('travel_date_start', '');
+addIntentMediaProperty('travel_date_end', '');
+addIntentMediaProperty('trip_type', '');
+addIntentMediaProperty('flight_class_of_service', '');
+addIntentMediaProperty('flight_preferred_airline', '');
+addIntentMediaProperty('flight_origin', '');
+addIntentMediaProperty('flight_destination', '');
+addIntentMediaProperty('flight_carrier_code', '');
+addIntentMediaProperty('has_insurance', '');
+addIntentMediaProperty('hotel_property_id', '');
+addIntentMediaProperty('hotel_city', '');
+addIntentMediaProperty('hotel_country', '');
+addIntentMediaProperty('hotel_state', '');
+addIntentMediaProperty('hotel_market_id', '');
+addIntentMediaProperty('hotel_brand_code', '');
+addIntentMediaProperty('hotel_rooms', '');
+addIntentMediaProperty('hotel_search_term', '');
+addIntentMediaProperty('car_rental_agency', '');
+addIntentMediaProperty('car_class', '');
+addIntentMediaProperty('car_trip_type', '');
+addIntentMediaProperty('car_pickup_location_type', '');
+addIntentMediaProperty('car_pickup_airport', '');
+addIntentMediaProperty('car_pickup_city', '');
+addIntentMediaProperty('car_pickup_state', '');
+addIntentMediaProperty('car_pickup_country', '');
+addIntentMediaProperty('car_pickup_time', '');
+addIntentMediaProperty('car_dropoff_location_type', '');
+addIntentMediaProperty('car_dropoff_airport', '');
+addIntentMediaProperty('car_dropoff_city', '');
+addIntentMediaProperty('car_dropoff_state', '');
+addIntentMediaProperty('car_dropoff_country', '');
+addIntentMediaProperty('car_dropoff_time', '');
+addIntentMediaProperty('package_type', '');
+addIntentMediaProperty('cruise_destination_region', '');
+addIntentMediaProperty('cruise_month_of_departure', '');
+addIntentMediaProperty('total_conversion_value', '');
+addIntentMediaProperty('order_id', '');
+addIntentMediaProperty('hotel_value_in_package', '');
+addIntentMediaProperty('conversion_type', '');
+addIntentMediaProperty('promo_code', '');
+addIntentMediaProperty('branded_keyword', '');
+addIntentMediaProperty('referrer_channel', '');
+addIntentMediaProperty('referrer_source', '');
+addIntentMediaProperty('referrer_keywords', '');
+addIntentMediaProperty('active_member_profile', '');
+addIntentMediaProperty('show_onpage_ads', '');
+addIntentMediaProperty('show_exit_units', '');
+addIntentMediaProperty('is_hv', '');
+addIntentMediaProperty('is_lv', '');
+addIntentMediaProperty('site_reporting_value_01', '');
+addIntentMediaProperty('site_reporting_value_02', '');
+addIntentMediaProperty('site_reporting_value_03', '');
+addIntentMediaProperty('site_reporting_value_04', '');
+addIntentMediaProperty('site_reporting_value_05', '');
+addIntentMediaProperty('site_reporting_value_06', '');
+addIntentMediaProperty('site_reporting_value_07', '');
+ 
+Bootstrapper.insertScript('//a.cdn.intentmedia.net/javascripts/v1/intent_media_core.js');
