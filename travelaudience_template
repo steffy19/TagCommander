@@ -1,0 +1,11 @@
+var txav = '1234';
+var txid = '';
+var txprc = '';
+var txpt = '';
+var txdur = '';
+ 
+var local_cachebuster = +new Date();
+txdur = parseInt (txdur,10);
+ 
+var local_img_url = "//"  + "ads.travelaudience.com/conversion_tracking.ashx?txav=" + txav + "&txid=" + txid + "&txprc=" + txprc + "&txpt=" + txpt + "&txdur=" + txdur + "&r=" + local_cachebuster; 
+Bootstrapper.imageRequest(local_img_url);
