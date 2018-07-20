@@ -1,0 +1,28 @@
+//Affiliate Window template in Ensighten
+
+var advertiserId = '',
+	amount = '',
+	channel = 'aw',
+	orderRef = '',
+	parts = 'DEFAULT' + ':' + amount,
+	voucher = '',
+	currency = '',
+	test = false === true ? '1' : '0';
+ 
+if (('js' === 'jsimg') || ('js' === 'js')) {
+	window.AWIN = {};
+	AWIN.Tracking = {};
+	AWIN.Tracking.Sale = {};
+	AWIN.Tracking.Sale.amount = amount;
+	AWIN.Tracking.Sale.channel = channel;
+	AWIN.Tracking.Sale.orderRef = orderRef;
+	AWIN.Tracking.Sale.parts = parts;
+	AWIN.Tracking.Sale.voucher = voucher;
+	AWIN.Tracking.Sale.currency = currency;
+	AWIN.Tracking.Sale.test = test;
+	Bootstrapper.insertScript('https://www.dwin1.com/' + advertiserId + '.js');
+}
+ 
+if (('js' === 'jsimg') || ('js' === 'img')) {
+	new Image().src = 'https://www.awin1.com/sread.img?tt=ns&tv=2&merchant=' + advertiserId + '&amount=' + amount + '&cr=' + currency + '&ref=' + orderRef + '&parts=' + parts + '&vc=' + voucher + '&ch=' + channel + '&testmode=' + test;
+}
