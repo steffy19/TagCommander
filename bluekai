@@ -1,0 +1,60 @@
+//Bluekai used for confirmation page
+Bootstrapper.bk_data = Bootstrapper.bk_data || {};
+Bootstrapper.bk_data['v1'] = ensVar0.call(this);
+Bootstrapper.bk_data['v2'] = ensVar1.call(this);
+Bootstrapper.bk_data['v3'] = ensVar2.call(this);
+Bootstrapper.bk_data['v4'] = ensVar3.call(this);
+Bootstrapper.bk_data['v5'] = ensVar4.call(this);
+Bootstrapper.bk_data['v6'] = ensVar5.call(this);
+Bootstrapper.bk_data['v7'] = ensVar6.call(this);
+Bootstrapper.bk_data['v8'] = ensVar7.call(this);
+Bootstrapper.bk_data['v9'] = ensVar8.call(this);
+Bootstrapper.bk_data['v10'] = ensVar9.call(this);
+Bootstrapper.bk_data['s1'] = ensVar10.call(this);
+Bootstrapper.bk_data['s2'] = ensVar11.call(this);
+Bootstrapper.bk_data['s3'] = ensVar12.call(this);
+Bootstrapper.bk_data['s4'] = ensVar13.call(this);
+Bootstrapper.bk_data['s5'] = ensVar14.call(this);
+Bootstrapper.bk_data['s6'] = ensVar15.call(this);
+Bootstrapper.bk_data['s7'] = ensVar16.call(this);
+Bootstrapper.bk_data['s8'] = ensVar17.call(this);
+Bootstrapper.bk_data['s9'] = ensVar18.call(this);
+Bootstrapper.bk_data['s10'] = 'FR';
+ 
+Bootstrapper.bindPageSpecificCompletion(function(){
+	window.bk_async = function() {
+		bk_allow_multiple_calls = false;
+		bk_use_multiple_iframes = false;
+ 
+		if (Bootstrapper.bk_data) {
+			for (var b in Bootstrapper.bk_data) {
+				if (Bootstrapper.bk_data.hasOwnProperty(b)) {
+					bk_addPageCtx(b, Bootstrapper.bk_data[b]);
+				}
+			}
+		}
+		if(false) {
+            if('') {
+                BKTAG.addParam("adid", '')
+            }
+            
+            if('') {
+                BKTAG.addParam("idfa", '')
+            }
+        }
+		if ('') {
+			bk_addPageCtx('id', '');
+		}
+ 
+		if ('') {
+			bk_addEmailHash('');
+		}
+ 
+		if ('') {
+			bk_addPhoneHash('');
+		}
+ 
+		BKTAG.doTag('41246', parseInt('10', 10));
+	};
+	Bootstrapper.insertScript('//tags.bkrtx.com/js/bk-coretag.js');
+});
