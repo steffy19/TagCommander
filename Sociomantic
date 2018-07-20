@@ -1,6 +1,6 @@
 //Sociomantic in results page
-Bootstrapper.data.resolve(['34086', '34089', '34106', '34036', '34082', '34064', '34183', '34134', '34121', '34056', '34057', '34187', '34232', '52817', '52816'],
-  function(departure_city_code, departure_date, arrival_city_code, return_date, number_of_pax, sociomantic_date, product_id, arrival_city_name, departure_city_name, dep_month, pricing, currency_code, page_url, manage_52817, manage_52816) {
+Bootstrapper.data.resolve(['34086', '34089', '34106', '34036', '34187', '34191', '34127', '52817', '52816' ], 
+	function(departure_city_code, departure_date, arrival_city_code, return_date, currency_code, order_revenue , quantity, manage_52817, manage_52816) {
 
     var ensVar0 = function() {
       return manage_52817
@@ -8,152 +8,71 @@ Bootstrapper.data.resolve(['34086', '34089', '34106', '34036', '34082', '34064',
     var ensVar1 = function() {
       return manage_52816
     };
-
-
+ 
     var custom_region = ensVar0.call(this);
     var custom_client_name = ensVar1.call(this);
     var param_identifier_value1 = departure_city_code;
     var param_identifier_value2 = departure_date;
     var param_identifier_value3 = arrival_city_code;
     var param_identifier_value4 = return_date;
-    var param_identifier_value5 = number_of_pax;
-    var param_valid = sociomantic_date;
-    var param_date = sociomantic_date;
-    var param_fn_value1 = product_id;
-    var param_fn_value2 = arrival_city_name;
-    var param_fn_value3 = '';
-    var param_fn_value4 = '';
-    var param_fn_value5 = '';
-    var param_category_1 = arrival_city_name;
-    var param_category_2 = departure_city_name;
-    var param_category_3 = dep_month;
-    var param_category_4 = '';
-    var param_category_5 = '';
-    var param_description_1 = departure_date;
-    var param_description_2 = '/';
-    var param_description_3 = return_date;
-    var param_brand_1 = '';
-    var param_brand_2 = '';
-    var param_brand_3 = '';
-    var param_price = pricing;
-    var param_amount = pricing;
+    var param_identifier_value5 = '';
+    var param_amount = order_revenue;
     var param_currency = currency_code;
-    var param_url = page_url;
-    var param_photo = 'http://www.edreams.com.ar/images/creas/ar/banners/flights_470x246_AR.jpg';
-
-    // added customer global parameters
+    var param_quantity = quantity;
+  
     var param_customer_identifier = '';
     var param_customer_mhash = '';
     var param_customer_segment = '';
 
-
-
-    if (param_customer_identifier || param_customer_mhash || param_customer_segment) {
-      window.customer = {};
-      if (param_customer_identifier) {
-        window.customer.identifier = param_customer_identifier;
-      }
-      if (param_customer_mhash) {
-        window.customer.mhash = param_customer_mhash;
-      }
-      if (param_customer_segment) {
-        window.customer.segment = parseInt(param_customer_segment, 10);
-      }
-    }
-
-    var local_product = {
-      category: [param_category_1]
-    };
-
-    var local_identifier = param_identifier_value1;
-    if (param_identifier_value2) {
-      local_identifier += "-" + param_identifier_value2;
-    }
-    if (param_identifier_value3) {
-      local_identifier += "-" + param_identifier_value3;
-    }
-    if (param_identifier_value4) {
-      local_identifier += "-" + param_identifier_value4;
-    }
-    if (param_identifier_value5) {
-      local_identifier += "-" + param_identifier_value5;
-    }
-
-    local_product.identifier = local_identifier;
-
-    // fn parameters
-    var local_fn = param_fn_value1;
-    if (param_fn_value2) {
-      local_identifier += "-" + param_fn_value2;
-    }
-    if (param_fn_value3) {
-      local_identifier += "-" + param_fn_value3;
-    }
-    if (param_fn_value4) {
-      local_identifier += "-" + param_fn_value4;
-    }
-    if (param_fn_value5) {
-      local_identifier += "-" + param_fn_value5;
-    }
-    local_product.fn = local_fn;
-
-    //check the rest of category parameters
-    if (param_category_2) {
-      local_product.category.push(param_category_2);
-    }
-    if (param_category_3) {
-      local_product.category.push(param_category_3);
-    }
-    if (param_category_4) {
-      local_product.category.push(param_category_4);
-    }
-    if (param_category_5) {
-      local_product.category.push(param_category_5);
-    }
-
-    var local_description = "";
-    if (param_description_1) {
-      local_description += param_description_1 + ",";
-    }
-    if (param_description_2) {
-      local_description += param_description_2 + ",";
-    }
-    if (param_description_3) {
-      local_description += param_description_3;
-    }
-
-    if (local_description) {
-      local_product.description = local_description;
-    }
-
-    var local_brand = "";
-    if (param_brand_1)
-      local_brand += param_brand_1 + ",";
-    if (param_brand_2)
-      local_brand += param_brand_2 + ",";
-    if (param_brand_3)
-      local_brand += param_brand_3;
-
-    if (local_brand) {
-      local_product.brand = local_brand;
-    }
-
-    if (param_valid) {
-      local_product.valid = param_valid;
-    }
-    if (param_date) {
-      local_product.date = param_date;
-    }
-
-    local_product.price = param_price || 0.00;
-    local_product.amount = param_amount;
-    local_product.currency = param_currency;
-    local_product.url = param_url;
-    local_product.photo = param_photo;
-
-    window.product = local_product;
-
-    var local_scr_url = ("https:" == document.location.protocol ? "https" : "http") + "://" + custom_region + "-sonar.sociomantic.com/js/2010-07-01/adpan/" + custom_client_name;
-    Bootstrapper.insertScript(local_scr_url);
-
-  });
+ 
+	if (param_customer_identifier || param_customer_mhash || param_customer_segment) {
+		window.customer = {};
+		if (param_customer_identifier) {
+			window.customer.identifier = param_customer_identifier;
+		}
+		if (param_customer_mhash) {
+			window.customer.mhash = param_customer_mhash;
+		}
+		if (param_customer_segment) {
+			window.customer.segment = parseInt(param_customer_segment, 10);
+		}
+	}
+ 
+	var local_basket = {
+		products: []	
+	};
+ 
+	var local_identifier = param_identifier_value1;	
+	if(param_identifier_value2) {
+		local_identifier += "-"+ param_identifier_value2;
+	}
+	if(param_identifier_value3) {
+		local_identifier += "-"+ param_identifier_value3;
+	}
+	if(param_identifier_value4) {
+		local_identifier += "-"+ param_identifier_value4;
+	}
+	if(param_identifier_value5) {
+		local_identifier += "-"+ param_identifier_value5;
+	}
+ 
+	var local_products = {};
+	local_products.identifier = local_identifier;
+	if(param_amount) {
+		local_products.amount = param_amount;
+	}
+	if(param_currency) {
+		local_products.currency = param_currency;
+	}
+	if(param_quantity) {
+		local_products.quantity = param_quantity;
+	}
+ 
+	local_basket.products.push(local_products);
+ 
+	window.basket = local_basket;
+ 
+	var local_scr_url = ("https:" == document.location.protocol ? "https" : "http") + "://" + custom_region + "-sonar.sociomantic.com/js/2010-07-01/adpan/" + custom_client_name;
+	Bootstrapper.insertScript(local_scr_url);
+ 
+});
