@@ -1,0 +1,70 @@
+//exelate used in all homepages and booking flow
+var custom_server = 'loadeu';
+var custom_publisher_account = '807';
+var custom_segment = '20211';
+var custom_sub_site = ensVar0.call(this);
+var param_category = ensVar1.call(this);
+var param_sub_category = '';
+var param_age  = '';
+var param_gender = '';
+var param_keyword = '';
+ 
+var customParams = [];
+var temp = {};
+ 
+customParams.push({ 'key' : 'pname',  'val' : ensVar2.call(this) });
+customParams.push({ 'key' : 'device',  'val' : ensVar3.call(this) });
+customParams.push({ 'key' : 'dd',  'val' : ensVar4.call(this) });
+customParams.push({ 'key' : 'orig',  'val' : ensVar5.call(this) });
+customParams.push({ 'key' : 'dest',  'val' : ensVar6.call(this) });
+customParams.push({ 'key' : 'rd',  'val' : ensVar7.call(this) });
+customParams.push({ 'key' : 'fclass',  'val' : ensVar8.call(this) });
+customParams.push({ 'key' : 'npax',  'val' : ensVar9.call(this) });
+customParams.push({ 'key' : 'nadults',  'val' : ensVar10.call(this) });
+customParams.push({ 'key' : 'nchildren',  'val' : ensVar11.call(this) });
+customParams.push({ 'key' : 'ninfants',  'val' : ensVar12.call(this) });
+customParams.push({ 'key' : 'geodep',  'val' : ensVar13.call(this) });
+customParams.push({ 'key' : 'geodest',  'val' : ensVar14.call(this) });
+customParams.push({ 'key' : 'orgweekday',  'val' : ensVar15.call(this) });
+customParams.push({ 'key' : 'retweekday',  'val' : ensVar16.call(this) });
+customParams.push({ 'key' : 'ins',  'val' : ensVar17.call(this) });
+customParams.push({ 'key' : 'fccardtype',  'val' : ensVar18.call(this) });
+customParams.push({ 'key' : 'chindate',  'val' : ensVar19.call(this) });
+customParams.push({ 'key' : 'choutdate',  'val' : ensVar20.call(this) });
+customParams.push({ 'key' : 'nguests',  'val' : ensVar21.call(this) });
+customParams.push({ 'key' : 'stars',  'val' : ensVar22.call(this) });
+customParams.push({ 'key' : 'hotcity',  'val' : ensVar23.call(this) });
+customParams.push({ 'key' : 'hotcntry',  'val' : ensVar24.call(this) });
+customParams.push({ 'key' : 'ch',  'val' : ensVar25.call(this) });
+customParams.push({ 'key' : 'in',  'val' : ensVar26.call(this) });
+customParams.push({ 'key' : 'citydest',  'val' : ensVar27.call(this) });
+customParams.push({ 'key' : 'resa',  'val' : ensVar28.call(this) });
+customParams.push({ 'key' : 'nnight',  'val' : ensVar29.call(this) });
+customParams.push({ 'key' : 'domain',  'val' : ensVar30.call(this) });
+customParams.push({ 'key' : 'gd',  'val' : ensVar31.call(this) });
+customParams.push({ 'key' : 'fcprice',  'val' : ensVar32.call(this) });
+customParams.push({ 'key' : 'prime_member',  'val' : ensVar33.call(this) });
+customParams.push({ 'key' : 'source',  'val' : ensVar34.call(this) });
+customParams.push({ 'key' : 'medium',  'val' : ensVar35.call(this) });
+customParams.push({ 'key' : 'pax_number',  'val' : ensVar36.call(this) });
+	
+ 
+var local_server = custom_server ? custom_server : 'load';
+ 
+var local_string = '';
+local_string += '?p=' + custom_publisher_account;
+local_string += custom_segment ? ('&c=' + custom_segment) : '&c=';
+local_string += '&g=' + custom_sub_site;
+local_string += param_category ? ('&ctg=' + param_category) : '';
+local_string += param_sub_category ? ('&subctg=' + param_sub_category) : '';
+local_string += param_age ? ('&ag=' + param_age) : '';
+local_string += param_gender ? ('&gd=' + param_gender) : '';
+local_string += param_keyword ? ('&kw=' + param_keyword) : '';
+ 
+for (var i = 0; i < customParams.length; i++) {
+	temp = customParams[i];
+	local_string += '&' + temp.key + '=' + temp.val;
+}
+ 
+var local_scr_url = '//' + local_server + '.exelator.com/load/' + local_string;
+Bootstrapper.insertScript(local_scr_url);
