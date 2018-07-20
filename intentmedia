@@ -1,0 +1,125 @@
+//intentmedia used in homepage 
+
+var ensVar0 = function() {
+  return % % data.Manage.Global Data.Language % %
+};
+var ensVar1 = function() {
+  return % % data.Manage.Global Data.userMemberId % %
+};
+
+
+var pageElem = '';
+var adType = 'IntentMediaIntercard';
+
+var pageElem2 = '';
+var adType2 = 'IntentMediaIntercard';
+
+var pageElem3 = '';
+var adType3 = 'IntentMediaIntercard';
+
+var tag_path = '//a.cdn.intentmedia.net/javascripts/intent_media_edreams.js';
+var site_name = 'EDREAMS';
+var page_id = 'flight.home';
+var site_language = ensVar0.call(this);
+var site_country = '';
+var site_currency = 'USD';
+var display_format_type = '';
+var user_member_id = ensVar1.call(this);
+var visitor_id = '';
+var number_of_opaque_listings = '';
+var travelers = '';
+var adults = '';
+var children = '';
+var seniors = '';
+var travel_date_start = '';
+var travel_date_end = '';
+var trip_type = '';
+var flight_class_of_service = '';
+var flight_origin = '';
+var flight_destination = '';
+var flight_carrier_code = '';
+var hotel_property_id = '';
+var hotel_city = '';
+var hotel_country = '';
+var hotel_state = '';
+var hotel_market_id = '';
+var hotel_brand_code = '';
+var hotel_rooms = '';
+var car_rental_agency = '';
+var car_class = '';
+var car_trip_type = '';
+var car_pickup_location_type = '';
+var car_pickup_airport = '';
+var car_pickup_city = '';
+var car_pickup_state = '';
+var car_pickup_country = '';
+var car_pickup_time = '';
+var car_dropoff_location_type = '';
+var car_dropoff_airport = '';
+var car_dropoff_city = '';
+var car_dropoff_state = '';
+var car_dropoff_country = '';
+var car_dropoff_time = '';
+var package_type = '';
+var total_conversion_value = '';
+var order_id = '';
+var hotel_value_in_package = '';
+var conversion_type = '';
+var promo_code = '';
+var referrer_channel = '';
+var referrer_source = '';
+var active_member_profile = '';
+var show_onpage_ads = 'N';
+var show_exit_units = '';
+var is_hv = '';
+var is_lv = '';
+var site_reporting_value_01 = '';
+var site_reporting_value_02 = '';
+var site_reporting_value_03 = '';
+var site_reporting_value_04 = '';
+var site_reporting_value_05 = '';
+var site_reporting_value_06 = '';
+var site_reporting_value_07 = '';
+var custom_01 = '';
+var custom_02 = '';
+var custom_03 = '';
+var custom_04 = '';
+var custom_05 = '';
+var custom_06 = '';
+var custom_07 = '';
+var custom_08 = '';
+var custom_09 = '';
+var custom_10 = '';
+
+if (adType !== '' && pageElem !== '') {
+  var newDiv = document.createElement('div');
+  newDiv.id = adType;
+  appendTo = document.querySelectorAll(pageElem);
+  appendTo[0].appendChild(newDiv);
+}
+if (adType2 !== '' && pageElem2 !== '') {
+  var newDiv2 = document.createElement('div');
+  newDiv2.id = adType2;
+  appendTo = document.querySelectorAll(pageElem2);
+  appendTo[0].appendChild(newDiv2);
+}
+
+if (adType3 !== '' && pageElem3 !== '') {
+  var newDiv3 = document.createElement('div');
+  newDiv3.id = adType3;
+  appendTo = document.querySelectorAll(pageElem3);
+  appendTo[0].appendChild(newDiv3);
+}
+
+var parameters = ['tag_path', 'site_name', 'page_id', 'site_language', 'site_country', 'site_currency', 'display_format_type', 'user_member_id', 'visitor_id', 'number_of_opaque_listings', 'travelers', 'adults', 'children', 'seniors', 'travel_date_start', 'travel_date_end', 'trip_type', 'flight_class_of_service', 'flight_origin', 'flight_destination', 'flight_carrier_code', 'hotel_property_id', 'hotel_city', 'hotel_country', 'hotel_state', 'hotel_market_id', 'hotel_brand_code', 'hotel_rooms', 'car_rental_agency', 'car_class', 'car_trip_type', 'car_pickup_location_type', 'car_pickup_airport', 'car_pickup_city', 'car_pickup_state', 'car_pickup_country', 'car_pickup_time', 'car_dropoff_location_type', 'car_dropoff_airport', 'car_dropoff_city', 'car_dropoff_state', 'car_dropoff_country', 'car_dropoff_time', 'package_type', 'total_conversion_value', 'order_id', 'hotel_value_in_package', 'conversion_type', 'promo_code', 'referrer_channel', 'referrer_source', 'active_member_profile', 'show_onpage_ads', 'show_exit_units', 'is_hv', 'is_lv', 'site_reporting_value_01', 'site_reporting_value_02', 'site_reporting_value_03', 'site_reporting_value_04', 'site_reporting_value_05', 'site_reporting_value_06', 'site_reporting_value_07', 'custom_01', 'custom_02', 'custom_03', 'custom_04', 'custom_05', 'custom_06', 'custom_07', 'custom_08', 'custom_09', 'custom_10'];
+var values = [tag_path, site_name, page_id, site_language, site_country, site_currency, display_format_type, user_member_id, visitor_id, number_of_opaque_listings, travelers, adults, children, seniors, travel_date_start, travel_date_end, trip_type, flight_class_of_service, flight_origin, flight_destination, flight_carrier_code, hotel_property_id, hotel_city, hotel_country, hotel_state, hotel_market_id, hotel_brand_code, hotel_rooms, car_rental_agency, car_class, car_trip_type, car_pickup_location_type, car_pickup_airport, car_pickup_city, car_pickup_state, car_pickup_country, car_pickup_time, car_dropoff_location_type, car_dropoff_airport, car_dropoff_city, car_dropoff_state, car_dropoff_country, car_dropoff_time, package_type, total_conversion_value, order_id, hotel_value_in_package, conversion_type, promo_code, referrer_channel, referrer_source, active_member_profile, show_onpage_ads, show_exit_units, is_hv, is_lv, site_reporting_value_01, site_reporting_value_02, site_reporting_value_03, site_reporting_value_04, site_reporting_value_05, site_reporting_value_06, site_reporting_value_07, custom_01, custom_02, custom_03, custom_04, custom_05, custom_06, custom_07, custom_08, custom_09, custom_10];
+
+var IntentMediaObject = {};
+for (var i = 0; i < parameters.length; i++) {
+  if (values[i]) {
+    IntentMediaObject[parameters[i]] = values[i];
+  }
+}
+
+window.IntentMediaProperties = IntentMediaObject;
+Bootstrapper.insertScript(tag_path);
