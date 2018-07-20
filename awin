@@ -1,0 +1,50 @@
+# Affiliate window used 
+"/* Rule Id: 2551931 */
+Bootstrapper.data.resolve(['53162', '34191', '54766', '34168', '34117', '34187'], function(manage_53162, manage_34191, manage_54766, manage_34168, manage_34117, manage_34187) {
+  var ensVar0 = function() {
+    return manage_53162
+  };
+  var ensVar1 = function() {
+    return manage_34191
+  };
+  var ensVar2 = function() {
+    return manage_54766
+  };
+  var ensVar3 = function() {
+    return manage_34168
+  };
+  var ensVar4 = function() {
+    return manage_34117
+  };
+  var ensVar5 = function() {
+    return manage_34187
+  };
+
+
+  var advertiserId = ensVar0.call(this),
+    amount = ensVar1.call(this),
+    channel = 'aw',
+    orderRef = ensVar3.call(this),
+    parts = ensVar2.call(this) + ':' + amount,
+    voucher = ensVar4.call(this),
+    currency = ensVar5.call(this),
+    test = false === true ? '1' : '0';
+
+  if (('jsimg' === 'jsimg') || ('jsimg' === 'js')) {
+    window.AWIN = {};
+    AWIN.Tracking = {};
+    AWIN.Tracking.Sale = {};
+    AWIN.Tracking.Sale.amount = amount;
+    AWIN.Tracking.Sale.channel = channel;
+    AWIN.Tracking.Sale.orderRef = orderRef;
+    AWIN.Tracking.Sale.parts = parts;
+    AWIN.Tracking.Sale.voucher = voucher;
+    AWIN.Tracking.Sale.currency = currency;
+    AWIN.Tracking.Sale.test = test;
+    Bootstrapper.insertScript('https://www.dwin1.com/' + advertiserId + '.js');
+  }
+
+  if (('jsimg' === 'jsimg') || ('jsimg' === 'img')) {
+    new Image().src = 'https://www.awin1.com/sread.img?tt=ns&tv=2&merchant=' + advertiserId + '&amount=' + amount + '&cr=' + currency + '&ref=' + orderRef + '&parts=' + parts + '&vc=' + voucher + '&ch=' + channel + '&testmode=' + test;
+  }
+})"
