@@ -1,0 +1,38 @@
+/* Rule Id: 2620297 */
+Bootstrapper.data.resolve(['34187', '34090', '34161', '34134', '34121'], function(manage_34187, manage_34090, manage_34161, manage_34134, manage_34121) {
+  Bootstrapper.data.resolve(['34263', '34261', '47198', '34086', '34106', '34089', '34036', '34082', '34068', '34085', '34099', '34110', '34046', '49312', '34193', '34159', '34228', '51960', '34168', '34235', '34061'], function(manage_34263, manage_34261, manage_47198, manage_34086, manage_34106, manage_34089, manage_34036, manage_34082, manage_34068, manage_34085, manage_34099, manage_34110, manage_34046, manage_49312, manage_34193, manage_34159, manage_34228, manage_51960, manage_34168, manage_34235, manage_34061) {
+    var params = {
+      pname: manage_34263,
+      pc: manage_34261,
+      domain: manage_47198,
+      vd1: manage_34089,
+      vd2: manage_34036,
+      t: manage_34082,
+      tad: manage_34068,
+      tch: manage_34085,
+      vn2: manage_34110,
+      vn1: manage_34046,
+      vconfno: manage_34168,
+      vcu: manage_34187,
+      va1: manage_34090,
+      va2: manage_34161,
+      vf1: manage_34134,
+      vf2: manage_34121
+    };
+
+    /* Please do not modify the below code. */
+    var paramsArr = [];
+    var pl = document.createElement('script');
+    for (key in params) {
+      paramsArr.push(key + '=' + encodeURIComponent(params[key]));
+    }
+
+    pl.type = 'text/javascript';
+    pl.async = true;
+    pl.src = 'https://pixel.sojern.com/partner/7LO71hBqOrJIDIBy/vc?' + paramsArr.join('&');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pl);
+  });
+
+
+
+})
