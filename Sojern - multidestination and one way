@@ -1,0 +1,30 @@
+// this is for the datadefinition used in Sojern - ED Flights Passenger and Sojern - ED Flights Confirmation.
+There are two: multidestination  and one way. See it below:
+
+//flight_type - multidestination
+function() {
+  var FOW = '';
+  var flight_type = (window.tmParam && window.tmParam.flight_type) ? window.tmParam.flight_type : '';
+
+  if (tmParam.flight_type === 'm') {
+    FOW = 'Y';
+  } else {
+    FOW = 'N';
+  }
+
+  return FOW;
+}
+
+//flight_type - one way
+function() {
+  var FOW = '';
+  var flight_type = (window.tmParam && window.tmParam.flight_type) ? window.tmParam.flight_type :'';
+
+	if (tmParam.flight_type === 'o') {
+		FOW = 'Y';
+	} else {
+		FOW = 'N';
+    } 
+
+  return FOW;
+}
