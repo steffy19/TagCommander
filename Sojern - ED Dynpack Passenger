@@ -1,32 +1,38 @@
-Bootstrapper.data.resolve(['34263', '34261', '47198', '34086', '34106', '34089', '34036', '34082', '34068', '34085', '34099', '34110', '34046','49312'], function(manage_34263, manage_34261, manage_47198, manage_34086, manage_34106, manage_34089, manage_34036, manage_34082, manage_34068, manage_34085, manage_34099, manage_34110, manage_34046, manage_49312) {
-  var params = {
-    pname: manage_34263,
-    pc: manage_34261,
-    domain: manage_47198,
-    vd1: manage_34089,
-    vd2: manage_34036,
-    t: manage_34082,
-    tad: manage_34068,
-    tch: manage_34085,
-    vn1: manage_34046,
-    vn2: %%data.Manage.Global Data.depcountry%%,
-    vf1: %%data.Manage.Global Data.arrivalcityname%%,
-    vf2: %%data.Manage.Global Data.departurecityname%%,
-    vcu: %%data.Manage.Global Data.Currency Code%%,
-    va1: %%data.Manage.Global Data.departureairportcode%%,
-    va2: %%data.Manage.Global Data.arrivalairportcode%%,
-   	vp: %%data.Manage.Global Data.Order Revenue%%
-  };
- 
-	/* Please do not modify the below code. */
-   var paramsArr = [];
-   var pl = document.createElement('script');
-   for(key in params) { 
-		paramsArr.push(key + '=' + encodeURIComponent(params[key]));
-	}
- 
-  pl.type = 'text/javascript';
-  pl.async = true;
-  pl.src = 'https://pixel.sojern.com/partner/7LO71hBqOrJIDIBy/vcart?' + paramsArr.join('&');
-  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pl);
-});
+/* Rule Id: 2620285 */
+Bootstrapper.data.resolve(['34110', '34134', '34121', '34187', '34090', '34161', '34191'], function(manage_34110, manage_34134, manage_34121, manage_34187, manage_34090, manage_34161, manage_34191) {
+  Bootstrapper.data.resolve(['34263', '34261', '47198', '34086', '34106', '34089', '34036', '34082', '34068', '34085', '34099', '34110', '34046', '49312'], function(manage_34263, manage_34261, manage_47198, manage_34086, manage_34106, manage_34089, manage_34036, manage_34082, manage_34068, manage_34085, manage_34099, manage_34110, manage_34046, manage_49312) {
+    var params = {
+      pname: manage_34263,
+      pc: manage_34261,
+      domain: manage_47198,
+      vd1: manage_34089,
+      vd2: manage_34036,
+      t: manage_34082,
+      tad: manage_34068,
+      tch: manage_34085,
+      vn1: manage_34046,
+      vn2: manage_34110,
+      vf1: manage_34134,
+      vf2: manage_34121,
+      vcu: manage_34187,
+      va1: manage_34090,
+      va2: manage_34161,
+      vp: manage_34191
+    };
+
+    /* Please do not modify the below code. */
+    var paramsArr = [];
+    var pl = document.createElement('script');
+    for (key in params) {
+      paramsArr.push(key + '=' + encodeURIComponent(params[key]));
+    }
+
+    pl.type = 'text/javascript';
+    pl.async = true;
+    pl.src = 'https://pixel.sojern.com/partner/7LO71hBqOrJIDIBy/vcart?' + paramsArr.join('&');
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pl);
+  });
+
+
+
+})
