@@ -1,0 +1,32 @@
+Bootstrapper.data.resolve(['34263', '34261', '47198', '34086', '34106', '34089', '34036', '34082', '34068', '34085', '34099', '34110', '34046'], function(manage_34263, manage_34261, manage_47198, manage_34086, manage_34106, manage_34089, manage_34036, manage_34082, manage_34068, manage_34085, manage_34099, manage_34110, manage_34046) {
+  var params = {
+    pname: manage_34263,
+    pc: manage_34261,
+    domain: manage_47198,
+    fa1: manage_34086,
+    fa2: manage_34106,
+    fd1: manage_34089,
+    fd2: manage_34036,
+    t: manage_34082,
+    tad: manage_34068,
+    tch: manage_34085,
+    fc: manage_34099,
+    fn2: manage_34110,
+    fn1: manage_34046,
+    fmc: % % data.Manage.Global Data.flight_type - multidestination % % ,
+    fow: % % data.Manage.Global Data.flight_type - one way % % ,
+    fcu: % % data.Manage.Global Data.Currency Code % %
+  };
+
+  /* Please do not modify the below code. */
+  var paramsArr = [];
+  var pl = document.createElement('script');
+  for (key in params) {
+    paramsArr.push(key + '=' + encodeURIComponent(params[key]));
+  }
+
+  pl.type = 'text/javascript';
+  pl.async = true;
+  pl.src = 'https://pixel.sojern.com/partner/7LO71hBqOrJIDIBy/fcart?' + paramsArr.join('&');
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(pl);
+});
